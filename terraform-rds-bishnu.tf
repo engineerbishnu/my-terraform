@@ -9,7 +9,10 @@ resource "aws_default_vpc" "default_vpc" {
     Name = "default vpc"
   }
 }
- 
+extended_support_window {
+# Specify enabled or disabled based on your requirement
+  extended_support = "disable"
+}
 # use data source to get all availability zones in the region
 data "aws_availability_zones" "available_zones" {}
  
